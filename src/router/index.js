@@ -20,6 +20,7 @@ const router = new VueRouter({
   ]
 })
 // 挂在路由守卫导航
+// to 将要访问的路径  from从哪个路径跳转而来  next 放行
 router.beforeEach((to, from, next) => {
   if (to.path === '/login') return next()
   const tokenStr = window.sessionStorage.getItem('token')
