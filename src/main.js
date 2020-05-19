@@ -14,7 +14,6 @@ Vue.prototype.$http = axios
 
 // 我是注释
 Vue.config.productionTip = false
-
 new Vue({
   router,
   render: h => h(App)
