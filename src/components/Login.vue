@@ -61,7 +61,7 @@ export default {
         if (!valid) return
         const { data: res } = await this.$http.post('login', this.loginForm)
         // console.log(this.loginForm)
-        if (res.meta.status !== 200) return this.$message.error('登录失败')
+        if (res.meta.status !== 200) return this.$message.err2or('登录失败')
         this.$message.success('登陆成功')
         // console.log(res)
         window.sessionStorage.setItem('token', res.data.token)
@@ -77,6 +77,7 @@ export default {
     .login_container {
         height: 100%;
         background-color: #2b4b6b;
+        // background-color: pink;
     }
     .login_box {
         width: 450px;
